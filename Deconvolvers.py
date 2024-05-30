@@ -77,7 +77,6 @@ class RichardsonLucyBlind(Deconvolver):
                 history[1, step] = f
             g = self._iterate_psf(image, f, g)
             f = self._iterate_object(image, f, g)
-            f_ft = np.abs(scipy.fft.fftshift(scipy.fft.fft2(scipy.fft.fftshift(f))))
         psf_estimated = g
         object_estimated = f
 
